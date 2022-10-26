@@ -1,7 +1,7 @@
 import { registerUser } from "./firebase.js";//crear usuario
 import { registerSetDoc } from "./firebase.js";//enviar los datos del usuario a la base de datos
 
-const form = document.getElementById("formulario");
+const form = document.getElementById("f1");
 
 form.addEventListener('submit',(evento)=>{
     evento.preventDefault();
@@ -13,13 +13,13 @@ form.addEventListener('submit',(evento)=>{
     const celular = document.getElementById("telefono");
     const Direccion = document.getElementById("direccion");
     const Rh = document.getElementById("rh");
-    const Departamento = document.getElementById("departamento");
-    const Ciudad = document.getElementById("ciudad");
+    const Departamento = document.getElementById("departamentos");
+    const Ciudad = document.getElementById("minucipios");
     const Genero = document.getElementById("genero");
 
-   //alert( user2.value+nombres.value+celular.value+Direccion.value+Rh.value+Departamento.value+Ciudad.value+Genero.value)
-    
-   registerSetDoc(user.value,nombres.value,celular.value,Direccion.value,Rh.value,Departamento.value,Ciudad.value,Genero.value);
+   
+    registerSetDoc(user.value,nombres.value,celular.value,Direccion.value,Rh.value,Departamento.value,Ciudad.value,Genero.value);
+
 
     const registro = registerUser(user.value, pass.value);
 
@@ -38,7 +38,7 @@ form.addEventListener('submit',(evento)=>{
 
     
     
-    form.reset();
+    //form.reset();
 
 
 });
