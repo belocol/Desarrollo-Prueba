@@ -48,9 +48,11 @@
             </select>
         </div>
  
-
-      <select name="   " id="departamentos" onchange="cambia_departamento()">
-        <option value="0">Departamento</option>
+        <div class="col-md-3">
+          <label for="inputState" class="form-label">Departamento</label>
+      <select name="   " id="departamentos" onchange="cambia_departamento()" class="form-select">
+       
+        <option value="0">Seleccione departamento</option>
       <option value="AMAZONAS">AMAZONAS</option>
       <option value="ANTIOQUIA">ANTIOQUIA</option>
       <option value="ARAUCA">ARAUCA</option>
@@ -86,18 +88,20 @@
       <option value="VICHADA">VICHADA</option>
       </select>
 
+    </div >
+    <div class="col-md-3">
+      <label for="inputState" class="form-label">Escoja su ciudad</label>
 
+      <select name=" " id="minucipios" class="form-select">
 
-      <select name=" " id="minucipios">
-
-          <option value="0">     </option>
+          <option value="0">  Ciudad   </option>
 
       </select>
-        
+    </div >
      
     
 
-        <div class="col-md-2">
+        <div class="col-md-3">
             <label for="inputState" class="form-label">Genero</label>
             <select id="genero" class="form-select">
               <option selected>Escoge tu opcion</option  required >
@@ -138,7 +142,6 @@
     
       
       <script type="module" src="../js/registro.js"></script> 
-      
- <!--      <script src="../js/validaciones.js"></script>   -->
+  <!--     <script src="../js/validaciones.js"></script>   -->
 </body>
 </html>

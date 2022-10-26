@@ -1,9 +1,9 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js';
 //metodo para el ingreso de usuarios
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js';
 //metodo para usar los servicios de Firestore
-import { getFirestore, collection, addDoc, setDoc, doc } from 'https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js';
+import { getFirestore, collection, addDoc, setDoc, doc } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js';
 
 
 const firebaseConfig = {
@@ -20,7 +20,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 //Initialize Autentication Login
-const auth = getAuth();
+const auth = getAuth(app);
 // Initialize Firestore
 const db = getFirestore(app);
 
