@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 //Initialize Autentication Login
 const auth = getAuth(app);
 // Initialize Firestore
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
 export const loginValidation = (email,password) => signInWithEmailAndPassword(auth, email, password)
 
@@ -44,7 +44,8 @@ export const registerAddDoc = (user,nombres,celular,Direccion,Rh,Departamento,Ci
 }
 
 export const registerSetDoc = (user,nombres,celular,Direccion,Rh,Departamento,Ciudad,Genero) => {
-  setDoc(doc(db, "DBusers", user),{
+  setDoc(doc(db, "DBusers",user),{
+    user,
     nombres,
     celular,
     Direccion,  
@@ -52,6 +53,7 @@ export const registerSetDoc = (user,nombres,celular,Direccion,Rh,Departamento,Ci
     Departamento,
     Ciudad,
     Genero
+    
   })
 
 }
